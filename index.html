@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="output"></p>
+    <br><br>
+    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(1)">1</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(2)">2</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(3)">3</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(4)">4</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar('+')">+</button>
+        </div>
+      </div>
+      <br><br>
+      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="First group">
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(5)">5</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(6)">6</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(7)">7</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar(8)">8</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="colcocar('=')">=</button>
+      </div>
+</head>
+<body>
+    <script>
+        let arr = [];
+
+        function colcocar(n){
+            salvar = document.getElementById("output")
+            if (n === '='){
+                document.getElementById("output").innerText = eval(document.getElementById("output").innerText)
+            }else{
+                document.getElementById("output").innerText = document.getElementById("output").innerText + n
+            }
+
+        }
+        
+
+        function calcular(){
+            alert('calculado');
+        }
+
+
+
+    </script>
+</body>
+</html>
